@@ -1,0 +1,77 @@
+.current-weather {
+  display: flex;
+
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: 10px -2px 20px 2px rgba(10 5 10, 30%);
+  color: #fff;
+
+  margin: 60px auto 10% auto;
+  min-height: 30vh;
+}
+
+.left,
+.right {
+  background-color: rgba(3, 3, 3, 0.2);
+
+  max-width: 35%;
+}
+
+.left {
+  min-width: 15%;
+  border-radius: 4px;
+}
+
+.right {
+  min-width: 15%;
+}
+
+.parameter-label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.parameter-value {
+  font-size: 1.4rem;
+}
+
+.parameter-row {
+  display: flex;
+  gap: 20px;
+  margin: 20px 20px;
+}
+
+.weather-description {
+  font-size: 2.5rem;
+  margin: 0.4rem 0.7rem 0;
+
+  font-weight: 600;
+}
+
+.city {
+  margin: 0 0.9rem 0.5rem;
+  font-size: 1.5rem;
+}
+
+.time,
+.date {
+  margin: 0 0.9rem;
+  font-size: 1rem;
+}
+
+.temperature {
+  font-size: 4rem;
+  margin: 0 0.9rem;
+  font-weight: 600;
+}
+
+.weather-icon {
+  width: 60%;
+}
+
+.parameter-icon {
+  width: 50px;
+
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}

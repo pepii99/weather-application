@@ -1,0 +1,31 @@
+.forecast-day {
+  display: flex;
+  flex-direction: row;
+  /* background-color: black; */
+  gap: 20px;
+  height: 220px;
+}
+
+.forecast-data {
+  padding: 20px 20px;
+}
+
+.forecast-day-icon {
+  width: 170%;
+  height: auto;
+}
+
+.day {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.forecast-temp {
+  font-size: 1.4rem;
+  margin: 0;
+}
