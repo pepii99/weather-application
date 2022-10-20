@@ -1,13 +1,5 @@
 import './forecast-day.css';
 
-// const getTime = () => {
-//   const date = new Date();
-//   const hour = date.getHours();
-//   const mins = date.getMinutes();
-//   const together = [hour, mins].join(':');
-//   return together;
-// };
-
 const getTime = () => {
   const date = new Date();
   date
@@ -29,9 +21,9 @@ const ForecastDay = ({ data, day }) => {
     <div className='forecast-day'>
       <div className='forecast-data'>
         <p className='day'>{day}</p>
-        <p className='time'>{getTime()}</p>
+        <p className='forecast-time'>{getTime()}</p>
         <p className='description'>{data.weather[0].description}</p>
-        <p className='temp'>{Math.round(data.main.temp_max)}°C</p>
+        <p className='forecast-temp'>{Math.round(data.main.temp_max)}°C</p>
       </div>
       <div className='forecast-day-img'>
         <img

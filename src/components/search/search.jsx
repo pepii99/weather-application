@@ -1,7 +1,6 @@
-import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers';
 import React, { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { GEO_API_URL, geoApiOptions } from '../../api';
+import { geoApiOptions } from '../../api';
 
 const CustomStyle = {
   option: (base, state) => ({
@@ -43,7 +42,7 @@ const Search = ({ onSearchChange }) => {
 
   const loadOptions = async (inputValue) => {
     return await fetch(
-      `${GEO_API_URL}cities?minPopulation=200000&sort=population&namePrefix=${inputValue}`,
+      `${process.env.REACT_APP_GEO_API_URL}cities?minPopulation=200000&sort=population&namePrefix=${inputValue}`,
       geoApiOptions
     )
       .then((response) => response.json())
@@ -68,7 +67,7 @@ const Search = ({ onSearchChange }) => {
   return (
     <AsyncPaginate
       placeholder='Search for city'
-      debounceTimeout={600}
+      debounceTimeout={500}
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}

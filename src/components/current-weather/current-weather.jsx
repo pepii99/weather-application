@@ -3,17 +3,6 @@ import './current-weather.css';
 const CurrentWeather = ({ data }) => {
   const { feels_like, humidity, pressure, temp } = data.main;
 
-  const getDate = () => {
-    const currentYear = new Date().getFullYear();
-    const currentDay = new Date().getDate();
-    const nameOfMonthUS = new Intl.DateTimeFormat('en-US', {
-      month: 'long',
-    }).format(new Date());
-    const together = [currentDay, nameOfMonthUS, currentYear].join(' ');
-
-    return together;
-  };
-
   const getTime = () => {
     const date = new Date();
     date
@@ -35,7 +24,6 @@ const CurrentWeather = ({ data }) => {
       <div className='left'>
         <p className='weather-description'>{data.weather[0].main}</p>
         <p className='city'>{data.name}</p>
-        {/* <p className='date'>{getDate()}</p> */}
         <p className='time'>{getTime()}</p>
         <p className='temperature'>{Math.round(temp)}°C</p>
         <img

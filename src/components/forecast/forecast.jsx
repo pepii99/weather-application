@@ -11,10 +11,10 @@ const WEEK_DAYS = [
   'Sunday',
 ];
 
-const todayDay = new Date().getDay();
+const getTodayDay = new Date().getDay();
 
-let forecastDays = WEEK_DAYS.slice(todayDay, WEEK_DAYS.length - 1).concat(
-  WEEK_DAYS.slice(0, todayDay - 2)
+let forecastDays = WEEK_DAYS.slice(getTodayDay, WEEK_DAYS.length - 1).concat(
+  WEEK_DAYS.slice(0, getTodayDay - 2)
 );
 
 const Forecast = ({ data }) => {
@@ -24,7 +24,7 @@ const Forecast = ({ data }) => {
   return (
     <div className='forecast'>
       <label className='title'>Daily</label>
-      <div className='forecast-grid'>
+      <div className='forecast-flex'>
         {forecastData.map((element, index) => (
           <ForecastDay data={element} day={forecastDays[index]} key={index} />
         ))}
